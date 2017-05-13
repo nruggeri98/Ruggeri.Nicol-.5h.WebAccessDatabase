@@ -1,0 +1,19 @@
+﻿@using System.Data
+@model System.Data.DataTable
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Query", "Default", FormMethod.Post))
+{
+    <p>
+        Inserisci la query: @Html.TextBox("query", "", htmlAttributes: new {@class = "form-control" }) <br />
+
+        <input type="submit" value="Esegui la query" class="form-control" />
+    </p>
+}
+
+
